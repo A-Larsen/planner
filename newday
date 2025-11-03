@@ -2,8 +2,8 @@
 
 day=$(date --date=+"$1 day" +%m-%d-%Y)
 folder="$day"
-mkdir -p $folder
-cd $folder
+mkdir -p ./days/$folder
+cd ./days/$folder
 cat << EOF > planner.adoc
 = Planner | $day
 :docinfo: shared
@@ -12,11 +12,11 @@ cat << EOF > planner.adoc
 :icons: font
 :stem:
 :toc: left
-:docinfodir: ..
+:docinfodir: ...
 
-[%header, cols=1,1]
+[%header, cols="1,1,1"]
 |===
-| Time | Activity
+| Time | Activity  | Details
 |===
 EOF
 nvim planner.adoc
