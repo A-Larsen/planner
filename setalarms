@@ -1,0 +1,16 @@
+#!/usr/bin/bash
+
+# list all at jobs with atq, remove a at job with atrm
+setAlarm() {
+    echo "aplay /home/nyquist/Audio/alarm/mixkit-digital-clock-digital-alarm-buzzer-992.wav & notify-send '$1'" | at $2
+}
+
+ while IFS= read -r line; do 
+     nl=$(echo $line | grep -P '^\| [0-9].:[0-9].(AM|PM)')
+     if [[ -n $nl ]]; then
+         activity=$(echo $nl | cut -c 23-)
+         time=$(echo $nl | cut -c 3-9)
+    echo -e "\e[36mSetting alarm: \e[33m$activity at $time\e[39m"
+    setAlarm "$activity" "$time"
+     fi
+ done <  $(find . -type f | grep planner.adoc | fzf)

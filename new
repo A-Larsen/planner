@@ -1,0 +1,24 @@
+#!/usr/bin/sh
+
+day=$(date --date=+"$1 day" +%m-%d-%Y)
+folder="$day"
+mkdir -p $folder
+cd $folder
+cat << EOF > planner.adoc
+= Planner | $day
+:docinfo: shared
+:source-highlighter: pygments
+:pygments-style: monokai
+:icons: font
+:stem:
+:toc: left
+:docinfodir: ..
+
+[%header, cols=1,1]
+|===
+| Time | Activity
+|===
+EOF
+nvim planner.adoc
+
+

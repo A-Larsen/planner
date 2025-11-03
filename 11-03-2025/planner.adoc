@@ -1,0 +1,22 @@
+= Planner 11-03-2025
+:docinfo: shared
+:source-highlighter: pygments
+:pygments-style: monokai
+:icons: font
+:stem:
+:toc: left
+:docinfodir: ..
+
+[%header, cols="1,1"]
+|===
+| Time              | Activity
+| 07:00AM - 08:00AM | Breakfast
+| 08:00AM - 10:00AM | Excercise
+| 10:00AM - 10:30AM | Shower
+| 10:30AM - 12:00PM | Blender Turials
+| 12:00PM - 12:30PM | Lunch  
+| 12:30PM - 01:00PM | Blender Tutorials
+| 01:30PM - 04:00PM | Algrebra 1 recap
+| 04:00PM - 06:00PM | Development configurations
+| 06:00PM - 07:00PM | Clean up
+|===
