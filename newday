@@ -12,7 +12,7 @@ cat << EOF > planner.adoc
 :icons: font
 :stem:
 :toc: left
-:docinfodir: ...
+:docinfodir: ../..
 
 [%header, cols="1,1,1"]
 |===
